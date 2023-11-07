@@ -8,6 +8,7 @@ import { postExecuterSchema } from "./post-executer.schema";
 import { PostExecuterForm } from "./executer-form";
 import axios from "axios";
 import { Card, CardContent } from "../../components/ui/card";
+import { BASE_API_URL } from "../shared/consts";
 
 const ExecuterPage = () => {
 
@@ -19,7 +20,7 @@ const ExecuterPage = () => {
     });
 
     const exectuePings = async (data: {host: string, count: number}) => {
-        const response = await axios.post('http://192.168.5.129:3000/ping-executer', data);
+        const response = await axios.post(`${BASE_API_URL}/ping-executer`, data);
         setLogs(response.data);
     }
 

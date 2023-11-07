@@ -30,7 +30,7 @@ export const PostExecuterForm = ({ onSubmit, form }: Props) => {
             <FormItem>
               <FormLabel>Host</FormLabel>
               <FormControl>
-                <Input placeholder="" {...field} />
+                <Input placeholder="" defaultValue={""} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

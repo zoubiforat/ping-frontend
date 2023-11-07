@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 export const postExecuterSchema = z.object({
-  host: z.string(),//.url(),
+  host: z.string(),
   count: z.array(z.number().positive()),
 });
 

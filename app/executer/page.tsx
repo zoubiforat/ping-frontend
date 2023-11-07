@@ -8,6 +8,7 @@ import { postExecuterSchema } from "./post-executer.schema";
 import { PostExecuterForm } from "./executer-form";
 import axios from "axios";
 import { Textarea } from "@/components/ui/textarea"
+import { Card, CardContent } from "../../components/ui/card";
 
 const ExecuterPage = () => {
 
@@ -24,13 +25,17 @@ const ExecuterPage = () => {
     }
 
     const onSubmit = form.handleSubmit((executer) => {
-        console.log("submitted", {...executer, count: executer.count[0]});
+        setLogs("Executing Ping...");
         exectuePings({...executer, count: executer.count[0]});
     });
 
     return <>
         <PostExecuterForm form={form} onSubmit={onSubmit} ></PostExecuterForm>
-        <Textarea value={logs}></Textarea>
+        <Card>
+            <CardContent className="p-6 whitespace-pre">
+                {logs}
+            </CardContent>
+        </Card>
     </> 
 }
 

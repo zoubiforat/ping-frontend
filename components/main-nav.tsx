@@ -13,13 +13,13 @@ export function MainNav({
     >
       <Link
         href="/"
-        className="text-sm font-medium transition-colors hover:text-primary"
+        className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
       >
         Home
       </Link>
       <Link
         href="/executer"
-        className="text-sm font-medium transition-colors hover:text-primary"
+        className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
       >
         Executer
       </Link>
@@ -27,7 +27,7 @@ export function MainNav({
         href="/statistics"
         className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
       >
-        Customers
+        Statistics
       </Link>
     </nav>
   )
